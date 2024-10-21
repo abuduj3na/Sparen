@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Security.Principal;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -20,5 +21,31 @@ namespace Sparen
         {
             InitializeComponent();
         }
+        double weeklyMoney;
+        double money;
+        double desiredAmount;
+        double extraMoney;
+        double weeks;
+        
+        private void calculateButton_Click(object sender, RoutedEventArgs e)
+        {
+            weeklyMoney = double.Parse(moneyTextBox.Text);
+            extraMoney = double.Parse(increaseMoneyTextBox.Text);
+            money = 0;
+            desiredAmount = double.Parse(desiredMoneyTB.Text);
+
+            while (money < desiredAmount)
+            {
+                money += weeklyMoney;
+                weeklyMoney += extraMoney;
+                weeks++;
+             
+            }
+            
+            outputTextBox.Text = $"spaarbedrag na {weeks} weken:" + $"{desiredAmount}\n" + "Extra weekgeld op dat moment " + $"{weeks*extraMoney}\n" + "Totaal spaargeld: " + $"{money}\n";
+
+
+        }
     }
+
 }

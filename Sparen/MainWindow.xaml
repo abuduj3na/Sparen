@@ -6,7 +6,17 @@
         xmlns:local="clr-namespace:Sparen"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Background="RoyalBlue">
+        <Label Content="Weekgeld" HorizontalAlignment="Left" Margin="165,138,0,0" VerticalAlignment="Top"/>
+        <Label Content="Wekelijkse verhooging" HorizontalAlignment="Left" Margin="165,169,0,0" VerticalAlignment="Top"/>
+        <Label Content="Gewenste spaarbedrag" HorizontalAlignment="Left" Margin="165,200,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="moneyTextBox" HorizontalAlignment="Left" Margin="309,142,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="increaseMoneyTextBox" HorizontalAlignment="Left" Margin="309,173,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="desiredMoneyTB" HorizontalAlignment="Left" Margin="309,204,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="calculateButton" Content="Berekenen" HorizontalAlignment="Left" Margin="515,142,0,0" VerticalAlignment="Top" Width="70" Click="calculateButton_Click"/>
+        <Button x:Name="clearButton" Content="Wissen" HorizontalAlignment="Left" Margin="515,173,0,0" VerticalAlignment="Top" Width="70"/>
+        <Button x:Name="closeButton" Content="Afsluiten" HorizontalAlignment="Left" Margin="515,204,0,0" VerticalAlignment="Top" Width="70"/>
+        <TextBox x:Name="outputTextBox" HorizontalAlignment="Left" Margin="170,245,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="415" Height="120"/>
 
     </Grid>
 </Window>
